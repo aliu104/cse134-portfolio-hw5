@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annie Liu</title>
+    <link rel="icon" href="assets/butterfly.svg" type="image/svg">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <script src="scripts/dark-mode.js"></script>
+    <script src="scripts/contact.js"></script>
+    
+    <header class="navbar">
+        <h1>ANNIE LIU</h1>
+        
+        <nav>
+            <!-- Regular menu -->
+            <ul class="desktop-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <!-- Hamburger menu (Visible on smaller screens) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <label class="light-dark-switch" id="toggle">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider"></span>
+            </label>
+
+        </nav>
+    </header>
+        
+
+    <main>
+        <section class="contact-form">
+            <h2>Let's Connect</h2>
+
+            <form id="form" action="https://httpbin.org/post" method="POST">
+                <!-- name field -->
+                <section class="field">
+                    <label for="name">Name:</label>
+                    <input type="text" class="input" id="name" name="name" pattern="[A-Za-z0-9\s.,!?'\-]+" required>
+                </section>
+            
+                <!-- email field -->
+                <section class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" class="input" id="email" name="email" required>
+                </section>
+
+                <!-- inquiry type -->
+                <section class="field">
+                    <label for="inquiryType">Type of Inquiry:</label>
+                    <select id="inquiryType" class="input" name="inquiryType" required>
+                        <option value="" disabled selected hidden>-- Select an option --</option>
+                        <optgroup label="Recruitment">
+                            <option value="internship">Internship</option>
+                            <option value="full-time">Full Time</option>
+                        </optgroup>
+                        <optgroup label="General Inquiries">
+                            <option value="mentorship">Mentorship</option>
+                            <option value="resume">Resume</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                </section>
+            
+                <!-- inquiry comments -->
+                <section class="field">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" class="input" name="comments" minlength="10" maxlength="300" pattern="[A-Za-z0-9\s.,!?'\-]+" required></textarea>
+                </section>
+                
+            
+                <input type="hidden" name="possible_bot" value="true">
+            
+                <button type="submit" class="submit-button"><b>Submit -></b></button>
+                <input type="hidden" name="form-errors" id="form-errors" value="none">
+                <output class="error-message"></output>
+                <output class="info-message"></output>
+            </form>
+        </section>
+          
+    </main>
+
+    <footer>
+       <p>This site was made by Annie Liu for CSE 134B.</p>
+    </footer>
+
+</body>
+</html>

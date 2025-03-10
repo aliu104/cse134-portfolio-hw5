@@ -1,0 +1,179 @@
+/* Navigation Bar */
+.navbar {
+    position: fixed;  /* Keeps it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg); /* White background */
+    color: var(--font-color);
+    box-shadow: 0 4px 10px var(--box-shadow); /* Adds a subtle shadow */
+    padding: 1rem 2rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures it stays on top */
+    text-transform: uppercase;
+    min-height: 9vh;
+}
+
+/* Title */
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Desktop View */
+nav {
+    display: flex;
+}
+
+.desktop-bar {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 1.5rem;
+    align-items: center;
+}
+
+.desktop-bar a { 
+    text-decoration: none;
+    color: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.desktop-bar a:hover {
+    color: var(--hover-color-dark); /* Change color on hover */
+}
+
+/* Mobile Menu (Hidden by Default) */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--hover-color-dark);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 1.5rem;
+}
+
+.mobile-menu li {
+    text-align: center;
+    padding: 10px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.mobile-menu a:hover {
+    color: black;
+    background-color: var(--hover-color-light);
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 30px;
+    margin: 5px;
+    transition: 0.4s;
+    background-color: var(--font-color);
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .desktop-bar {
+        display: none; /* Hide Full Menu */
+    }
+
+    .hamburger {
+        display: flex; /* Show Hamburger */
+        margin-right: 1rem;
+    }
+
+    /* Show Mobile Menu when Checkbox is Checked */
+    #menu-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+}
+
+
+
+/* ----------- toggle switch ------------- */
+.light-dark-switch {
+    position: relative;
+    display: none;
+    width: 50px;
+    height: 25px;
+    align-self: center;
+}
+
+.light-dark-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: var(--color-bg);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--hover-color-dark);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}

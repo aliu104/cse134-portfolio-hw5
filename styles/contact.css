@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding-top: 10dvh;
+    height: 100dvh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 2rem;
+    margin-top: 50px;
+    align-self: center;
+    background-color: var(--card-color);
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 8px var(--box-shadow);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+    transform: scale(1.05); 
+    box-shadow: 8px 8px 20px var(--box-shadow);
+}
+
+.contact-form h2 {
+    font-family: var(--font-heading);
+    align-self: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem;
+    align-self: center;
+}
+
+label {
+    text-transform: uppercase;
+    padding-bottom: 0.25rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.submit-button {
+    color: white;
+    border: 2px solid transparent;
+    padding: 0.5rem;
+    background-color: var(--hover-color-dark);
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    min-width: 30%;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background-color: var(--hover-color-light);
+    color: black;
+    border-color: var(--hover-color-dark);
+}
+
+.input {
+    border: 1px solid var(--box-shadow-light);
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: green;
+}
+
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: red;
+}
+
+.error-message {
+    color: var(--fail-color);
+    padding-top: 1rem;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    font-size: small;
+}
+
+.info-message {
+    color: var(--success-color);
+    padding: 0;
+    font-size: small;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 9vh;
+}
+
+/* Flash effect for invalid input */
+.flash {
+    animation: flash 0.3s ease-in-out;
+}
+@keyframes flash {
+    0% { background-color: red; }
+    100% { background-color: white; }
+}

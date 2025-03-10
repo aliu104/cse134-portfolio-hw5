@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="icon" href="assets/butterfly.svg" type="image/svg">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/resume.css">
+</head>
+<body>
+    <script src="scripts/dark-mode.js"></script>
+
+    <header class="navbar">
+        <h1>ANNIE LIU</h1>
+        
+        <nav>
+            <!-- Regular menu -->
+            <ul class="desktop-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <!-- Hamburger menu (Visible on smaller screens) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <label class="light-dark-switch" id="toggle">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Resume</h1>
+
+        <!-- Experience section -->
+        <section class="section-block">
+            <section class="experience-title-block">
+                <h2 style="width:fit-content;">Experience</h2>
+
+                <!-- Resume button -->
+                <a href="assets/Liu_Annie_Resume_grad.pdf" target="_blank" class="resume-button">
+                    VIEW RESUME
+                </a>
+            </section>
+    
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <source srcset="assets/bloomberg_small.webp" media="(max-width: 820px)">
+                    <source srcset="assets/bloomberg_big.webp" media="(max-width: 2000px)">
+                    <img src="assets/bloomberg.png" alt="Bloomberg Logo">
+                </picture>
+
+                <section class="experience-info">
+                    <h3>Software Engineer Intern @ Bloomberg</h3>
+                    <p><em>Summer 2024</em></p>
+                    <p>Designed, implemented, and tested a web application via C++ and TypeScript to perform mass updates directly thru the Bloomberg Terminal without engineering involvement. Developed web services, a SQL-based database schema, and an intuitive front-end interface.</p>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <source srcset="assets/splunk_small.webp" media="(max-width: 820px)">
+                    <source srcset="assets/splunk_big.webp" media="(max-width: 2000px)">
+                    <img src="assets/splunk.png" alt="Splunk Logo">
+                </picture>
+
+                <section class="experience-info">
+                    <h3>Software Engineer Intern @ Splunk</h3>
+                    <p><em>Summer 2023</em></p>
+                    <p>Streamlined Splunk’s testing process by automating steps to enter debug sessions and providing rapid access to diagnostic test tools via tmux, bash, and Python. Enhanced developer experience by providing a centralized, intuitive resource to navigate and initiate debug sessions effectively.</p>
+                </section>
+            </section>
+        </section>
+                   
+        <section class="section-block">
+            <h2>Leadership</h2>
+
+            <section class="leadership-hero-block">
+                <!-- Tutor section -->
+                <section class="leadership-block">
+                    <h3>CSE Tutor</h3>
+                    <p><em>Spring 2023 - Present</em></p>
+                    <img src="assets/tutor.jpg" alt="2023 CSE Tutor Potluck">
+                    <p>I have been a tutor for <b>CSE 12 Basic Data Structures</b>, one of the most foundational CS courses at UC San Diego, for approaching three years. As a tutor, I have supported and guided <i>nearly 2500 students</i> through fostering good coding practices like clean code, debugging skills, and visualizing concepts, helping students build a strong base for their future coursework. Witnessing their progress and receiving positive feedback confirmed that my <em>individualized teaching approach</em> and patience made a meaningful impact.</p>
+                </section>
+
+                <!-- HKN section -->
+                <section class="leadership-block">
+                    <h3>Eta Kappa Nu (IEEE-HKN)</h3>
+                    <p><em>Fall 2021 - Present</em></p>
+                    <img src="assets/hkn.jpeg" alt="2022 HKN Student Leadership Conference">
+                    <p>Being part of HKN has defined my UC San Diego experience—I’ve made my closest friends, countless memories, and a real impact on the engineering community. As VP Events and President, I led the post-pandemic transition back to in-person by restoring key events like career fairs and hackathons while rebuilding industry and alumni connections. I also prioritized mentorship and inclusivity within our org, regularly hosting coffee chats and launching a diversity initiative to foster collaboration and improve accessibility.</p>
+                </section>
+            </section>
+        </section>
+
+        <!-- Education section -->
+        <section class="section-block">
+            <h2>Education</h2>
+
+            <section class="education-block">
+                <h3>University of California, San Diego</h3>
+                <p><em>September 2021 - June 2025</em></p>
+                <p>
+                    <abbr title="Bachelor of Science">B.S.</abbr> Computer Science, Minor in Mathematics<br>
+                    GPA: 3.97
+                </p>
+
+                <hr>
+                
+                <h3>Coursework</h3>
+                <p>
+                    Linear Algebra, Probability, Statistics, Data Structures, Algorithms, Machine Learning, Operating Systems, Recommender Systems & Web Mining, Database Systems, Parallel Computing, Natural Language Processing, Computer Security
+                </p>
+
+                <hr>
+                            
+                <h3>Skills</h3>
+                <dl style="padding: 0; margin: 0">
+                    <dt><strong>Languages</strong></dt>
+                    <dd>Java, Python, C, C++, SQL, HTML, TypeScript, Bash, LaTeX</dd>
+
+                    <dt><strong>Software Tools</strong></dt>
+                    <dd>Linux/Ubuntu, Git/Gitlab/GitHub, Github Actions CI/CD, GDB, Vim, Android Studio, Jupyter Notebook, JUnit</dd>
+                </dl>
+            </section>
+        </section>
+
+        <footer>
+            <p>This site was made by Annie Liu for CSE 134B.</p>
+         </footer>
+        
+    </main>
+
+</body>
+</html>
