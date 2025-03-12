@@ -1,0 +1,44 @@
+[
+  {
+      "title": "Camellia Road Tea Bar",
+      "imgSrc": "assets/camellia.webp",
+      "imgAlt": "Camellia Road Tea Bar storefront",
+      "description": "My favorite boba spot! If you like strong tea flavor, this is for you. Also a really solid study spot!",
+      "link": "https://www.camelliard.com/?srsltid=AfmBOorvU_MY0Y-rCskmskXOwFypPZmVX8ATVVS4FrLO2yISvQxvSR_k"
+  },
+  {
+      "title": "Stella Jean’s",
+      "imgSrc": "assets/stellajeans.webp",
+      "imgAlt": "A scoop of ube ice cream from Stella Jean’s",
+      "description": "My favorite ice cream spot, their ube ice cream is to die for!",
+      "link": "https://www.stellajeans.com/"
+  },
+  {
+      "title": "Cesarina",
+      "imgSrc": "assets/cesarina.webp",
+      "imgAlt": "Freshly-made pasta from Cesarina",
+      "description": "An incredible pasta spot, freshly-made pasta, and complimentary focaccia bread is huge!",
+      "link": "https://cesarinarestaurant.com/welcome-to-cesarina/"
+  },
+  {
+      "title": "8th and B Poke",
+      "imgSrc": "assets/poke.webp",
+      "imgAlt": "A delicious poke bowl from 8th and B Poke",
+      "description": "The greatest poke place of all time, small business!",
+      "link": "https://www.yelp.com/biz/8th-and-b-poke-national-city"
+  },
+  {
+      "title": "Oscars Mexican Seafood",
+      "imgSrc": "assets/oscars.webp",
+      "imgAlt": "Seafood tacos from Oscars Mexican Seafood",
+      "description": "Best place for seafood tacos, they don’t skimp on seafood! Taco especial is a must-try, and there is happy hour 2-5pm on weekdays.",
+      "link": "https://oscarsmexicanseafood.com/"
+  },
+  {
+      "title": "Shan Xi Magic Kitchen",
+      "imgSrc": "assets/shanxi.webp",
+      "imgAlt": "A bowl of biang biang noodles from Shan Xi Magic Kitchen",
+      "description": "I am an absolute sucker for wide noodles, the wider the better. This spot serves authentic ‘biang biang’ noodles, the texture is incredible! You can spot locals, influencers, families, and college students here!",
+      "link": "https://www.shanximagickitchen.com/"
+  }
+]
