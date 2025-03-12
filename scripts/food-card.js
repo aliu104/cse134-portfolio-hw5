@@ -43,14 +43,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	if (storedFoodSpots.length === 0) {
 		try {
-			const response = await fetch('../food.json');
+			const response = await fetch('https://aliu104.github.io/cse134-portfolio-hw5/docs/food.json');
 			const foodSpots = await response.json();
 			localStorage.setItem('foodSpots', JSON.stringify(foodSpots));
+			console.log("fetched from API");
 			populateCards(foodSpots, container);
 		} catch (error) {
 			console.error("Failed to fetch food spots:", error);
 		}
 	} else {
+		console.log("fetched from local storage");
 		populateCards(storedFoodSpots, container);
 	}
 });
