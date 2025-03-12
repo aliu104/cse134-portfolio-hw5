@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recs</title>
+    <link rel="icon" href="assets/butterfly.svg" type="image/svg">
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/food.css">
+</head>
+<body>
+    <script src="scripts/dark-mode.js"></script>
+
+    <header class="navbar">
+        <h1>ANNIE LIU</h1>
+        
+        <nav>
+            <!-- Regular menu -->
+            <ul class="desktop-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <!-- Hamburger menu (Visible on smaller screens) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="passions.html">Passions</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+
+            <label class="light-dark-switch" id="toggle">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Food Recommendations</h1>
+        <script type="module" src="scripts/food-card.js"></script>
+
+        <!-- Experience section -->
+        <section class="section-block" id="food-container">
+    
+            <!-- <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/camellia.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>Camellia Road Tea Bar</h2>
+                    <p>my favorite boba spot! if you like strong tea flavor, this is for you, also a really solid study spot!</p>
+                    <a href="https://www.camelliard.com/?srsltid=AfmBOorvU_MY0Y-rCskmskXOwFypPZmVX8ATVVS4FrLO2yISvQxvSR_k" target="_blank">Restaurant Link</a>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/stellajeans.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>8th and B Poke</h2>
+                    <p>the greatest poke place of all time, small family business! a strong competitor against poke in Hawaii!</p>
+                    <a href="https://www.yelp.com/biz/8th-and-b-poke-national-city" target="_blank">Restaurant Link</a>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/cesarina.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>Camellia Road Tea Bar</h2>
+                    <p>my favorite boba spot! if you like strong tea flavor, this is for you, also a really solid study spot!</p>
+                    <a href="https://www.camelliard.com/?srsltid=AfmBOorvU_MY0Y-rCskmskXOwFypPZmVX8ATVVS4FrLO2yISvQxvSR_k" target="_blank">Restaurant Link</a>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/poke.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>8th and B Poke</h2>
+                    <p>the greatest poke place of all time, small family business! a strong competitor against poke in Hawaii!</p>
+                    <a href="https://www.yelp.com/biz/8th-and-b-poke-national-city" target="_blank">Restaurant Link</a>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/oscars.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>Camellia Road Tea Bar</h2>
+                    <p>my favorite boba spot! if you like strong tea flavor, this is for you, also a really solid study spot!</p>
+                    <a href="https://www.camelliard.com/?srsltid=AfmBOorvU_MY0Y-rCskmskXOwFypPZmVX8ATVVS4FrLO2yISvQxvSR_k" target="_blank">Restaurant Link</a>
+                </section>
+            </section>
+
+            <section class="experience-block">
+                <picture class="experience-block-img">
+                    <img src="assets/shanxi.webp" alt="Bloomberg Logo">
+                </picture>
+                <section class="experience-info">
+                    <h2>8th and B Poke</h2>
+                    <p>the greatest poke place of all time, small family business! a strong competitor against poke in Hawaii!</p>
+                    <a href="https://www.yelp.com/biz/8th-and-b-poke-national-city" target="_blank">Restaurant Link</a>
+                </section>
+            </section> -->
+
+        </section>
+                   
+
+        <footer>
+            <p>This site was made by Annie Liu for CSE 134B.</p>
+         </footer>
+        
+    </main>
+
+</body>
+</html>

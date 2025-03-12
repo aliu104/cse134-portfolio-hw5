@@ -1,0 +1,128 @@
+body {
+    padding-top: 10dvh;
+    margin: 0;
+    background-color: var(--card-color);
+    color: var(--font-color);
+    box-sizing: border-box;
+}
+
+h3 {
+    margin: 0.5rem 0;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.page-title {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.section-block {
+    padding: 2% 18%;
+    display: grid;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+    /* justify-content: center; */
+    gap: 30px;
+    grid-auto-flow: row dense;
+    /* grid-auto-rows: min-content; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* align-items: start; */
+}
+
+.section-block h2 {
+    display: flex;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.experience-block {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: 0;
+    background-color: var(--color-bg);
+    box-shadow: 0 4px 6px var(--box-shadow-light);
+    height: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-block:hover {
+    transform: scale(1.05); 
+    box-shadow: 8px 8px 20px var(--box-shadow-light);
+}
+
+.experience-block-img {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;    
+    width: 100%;
+    height: auto;
+    object-fit: cover ;
+
+}
+
+.experience-block-img img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.experience-info {
+    display: flex;
+    padding: 2rem;
+    margin: 0;
+    flex-direction: column;
+    justify-content:space-between;
+    align-self: center;
+    height: 100%;
+}
+
+.experience-block a {
+    background-color: var(--hover-color-dark);
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 2%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-decoration: none; 
+    text-align: center;
+}
+
+.experience-block a:hover {
+    background-color: var(--hover-color-light);
+    color: black;
+    border-color: var(--hover-color-dark);
+}
+
+
+hr {
+    width: 100%; 
+    align-self: stretch; 
+}
+
+/* Tablet view */
+@media (max-width: 1100px) {
+    .section-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-title{
+        font-size: clamp(2rem, 5dvw, 10rem);
+    }
+
+}
+
