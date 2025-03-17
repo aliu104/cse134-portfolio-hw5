@@ -10,44 +10,8 @@
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-    <script src="scripts/dark-mode.js"></script>
-
-    <header class="navbar">
-        <h1>ANNIE LIU</h1>
-        
-        <nav>
-            <!-- Regular menu -->
-            <ul class="desktop-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <!-- Hamburger menu (Visible on smaller screens) -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="mobile-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <label class="light-dark-switch" id="toggle">
-                <input type="checkbox" id="toggle-switch">
-                <span class="slider"></span>
-            </label>
-        </nav>
-    </header>
-        
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-placeholder"></div>
 
     <main>
         <div class="hero-section">
@@ -73,16 +37,17 @@
                 </h2>
                 <p>
                     Hi, my name is Annie Liu, and I'm a fourth-year computer science major at UC San Diego, interested in pursuing a career in software engineering. Along with a solid foundation in a variety of programming languages and software tools, I am a natural leader with experience mentoring and managing teams. With exceptional communication skills, strong organization, and resourcefulness, I bring a quick learning ability to contribute effectively to innovative projects.<br><br>
-                    During my free time, I love staying fit through basketball, weightlifting, and running around San Diego. I believe exercise builds both physical and mental endurance, fostering the grit needed to face life’s challenges. One of my favorite ways to experience different cultures is through food, and I enjoy sharing the unique eats I discover on my food Instagram and Beli.
+                    During my free time, I love staying fit through basketball, weightlifting, and running around San Diego. I believe exercise builds both physical and mental endurance, fostering the grit needed to face life's challenges. One of my favorite ways to experience different cultures is through food, and I enjoy sharing the unique eats I discover on my food Instagram and Beli.
                 </p>
             </section>
-        </section>
-        
+        </div>
     </main>
 
     <footer>
        <p>This site was made by Annie Liu for CSE 134B.</p>
     </footer>
 
+    <!-- Load navbar script at the end of body -->
+    <script src="scripts/load-navbar.js"></script>
 </body>
 </html>

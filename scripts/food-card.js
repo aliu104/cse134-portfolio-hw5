@@ -12,7 +12,6 @@ class FoodCard extends HTMLElement {
 		return ['title', 'img-src', 'img-alt', 'description', 'link'];
 	}
 
-
 	connectedCallback() {
 		// Create a style tag for the component’s CSS
 		const style = document.createElement('style');
@@ -37,25 +36,51 @@ class FoodCard extends HTMLElement {
 // Define the custom element
 customElements.define('food-card', FoodCard);
 
-document.addEventListener('DOMContentLoaded', async () => {
-	const container = document.getElementById("food-container");
-	const storedFoodSpots = JSON.parse(localStorage.getItem('foodSpots')) || [];
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("load-storage-btn").addEventListener("click", loadLocalData);
+    document.getElementById("load-remote-btn").addEventListener("click", loadRemoteData);
+});
 
-	if (storedFoodSpots.length === 0) {
+async function loadLocalData() {
+    const container = document.getElementById("food-container");
+	container.innerHTML = '';
+	// localStorage.clear();
+    const storedFoodSpots = JSON.parse(localStorage.getItem('foodSpots')) || [];
+    if (storedFoodSpots.length > 0) {
+        populateCards(storedFoodSpots, container);
+    } else {
+        // alert("No data found in local storage.");
 		try {
-			const response = await fetch('https://aliu104.github.io/cse134-portfolio-hw5/docs/food.json');
+			const response = await fetch('../docs/food.json');
 			const foodSpots = await response.json();
 			localStorage.setItem('foodSpots', JSON.stringify(foodSpots));
-			console.log("fetched from API");
 			populateCards(foodSpots, container);
 		} catch (error) {
 			console.error("Failed to fetch food spots:", error);
 		}
-	} else {
-		console.log("fetched from local storage");
-		populateCards(storedFoodSpots, container);
-	}
-});
+    }
+	console.log("fetched from local storage");
+}
+
+async function loadRemoteData() {
+    const container = document.getElementById("food-container");
+	container.innerHTML = '';
+    try {
+        const response = await fetch('https://api.jsonbin.io/v3/b/67d0f5f38561e97a50ea4787', {
+            headers: {
+                'X-Master-Key': '$2a$10$SUjoEwRYxgCCKSjL.IqCH.MquxIIFS24g9IorvDATyL8yp5bFyMZu'
+            }
+        });
+        const result = await response.json();
+        const foodSpots = result.record;
+        localStorage.setItem('foodSpots', JSON.stringify(foodSpots));
+        populateCards(foodSpots, container);
+    } catch (error) {
+        console.error("Failed to fetch remote data:", error);
+        alert("Failed to load remote data. Check console for errors.");
+    }
+	console.log("fetched from API");
+}
 
 function populateCards(foodSpots, container) {
     foodSpots.forEach(spot => {

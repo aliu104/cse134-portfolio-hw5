@@ -10,55 +10,28 @@
     <link rel="stylesheet" href="styles/food.css">
 </head>
 <body>
-    <script src="scripts/dark-mode.js"></script>
-
-    <header class="navbar">
-        <h1>ANNIE LIU</h1>
-        
-        <nav>
-            <!-- Regular menu -->
-            <ul class="desktop-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <!-- Hamburger menu (Visible on smaller screens) -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="mobile-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <label class="light-dark-switch" id="toggle">
-                <input type="checkbox" id="toggle-switch">
-                <span class="slider"></span>
-            </label>
-        </nav>
-    </header>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-placeholder"></div>
 
     <main>
         <h1 class="page-title">Food Recommendations</h1>
-        
+
+        <section class="button-container">
+            <button id="load-storage-btn">Load Local</button>
+            <button id="load-remote-btn">Load Remote</button>
+        </section>
+
+        <section class="image-container"></section>
+
         <script type="module" src="scripts/food-card.js"></script>
         <section class="section-block" id="food-container"></section>                   
 
-        <footer>
-            <p>This site was made by Annie Liu for CSE 134B.</p>
-         </footer>
-        
-    </main>
+    <footer>
+        <p>This site was made by Annie Liu for CSE 134B.</p>
+    </footer>
 
+    <!-- Load navbar script -->
+    <script src="scripts/load-navbar.js"></script>
+    <script src="scripts/food-card.js"></script>
 </body>
 </html>

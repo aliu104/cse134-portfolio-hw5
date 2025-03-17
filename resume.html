@@ -10,43 +10,8 @@
     <link rel="stylesheet" href="styles/resume.css">
 </head>
 <body>
-    <script src="scripts/dark-mode.js"></script>
-
-    <header class="navbar">
-        <h1>ANNIE LIU</h1>
-        
-        <nav>
-            <!-- Regular menu -->
-            <ul class="desktop-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <!-- Hamburger menu (Visible on smaller screens) -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="mobile-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="passions.html">Passions</a></li>
-                <li><a href="food.html">Food</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-
-            <label class="light-dark-switch" id="toggle">
-                <input type="checkbox" id="toggle-switch">
-                <span class="slider"></span>
-            </label>
-        </nav>
-    </header>
+    <!-- Navbar will be loaded here -->
+    <div id="navbar-placeholder"></div>
 
     <main>
         <h1 class="page-title">Resume</h1>
@@ -86,7 +51,7 @@
                 <section class="experience-info">
                     <h3>Software Engineer Intern @ Splunk</h3>
                     <p><em>Summer 2023</em></p>
-                    <p>Streamlined Splunk’s testing process by automating steps to enter debug sessions and providing rapid access to diagnostic test tools via tmux, bash, and Python. Enhanced developer experience by providing a centralized, intuitive resource to navigate and initiate debug sessions effectively.</p>
+                    <p>Streamlined Splunk's testing process by automating steps to enter debug sessions and providing rapid access to diagnostic test tools via tmux, bash, and Python. Enhanced developer experience by providing a centralized, intuitive resource to navigate and initiate debug sessions effectively.</p>
                 </section>
             </section>
         </section>
@@ -108,7 +73,7 @@
                     <h3>Eta Kappa Nu (IEEE-HKN)</h3>
                     <p><em>Fall 2021 - Present</em></p>
                     <img src="assets/hkn.jpeg" alt="2022 HKN Student Leadership Conference">
-                    <p>Being part of HKN has defined my UC San Diego experience—I’ve made my closest friends, countless memories, and a real impact on the engineering community. As VP Events and President, I led the post-pandemic transition back to in-person by restoring key events like career fairs and hackathons while rebuilding industry and alumni connections. I also prioritized mentorship and inclusivity within our org, regularly hosting coffee chats and launching a diversity initiative to foster collaboration and improve accessibility.</p>
+                    <p>Being part of HKN has defined my UC San Diego experience—I've made my closest friends, countless memories, and a real impact on the engineering community. As VP Events and President, I led the post-pandemic transition back to in-person by restoring key events like career fairs and hackathons while rebuilding industry and alumni connections. I also prioritized mentorship and inclusivity within our org, regularly hosting coffee chats and launching a diversity initiative to foster collaboration and improve accessibility.</p>
                 </section>
             </section>
         </section>
@@ -147,9 +112,11 @@
 
         <footer>
             <p>This site was made by Annie Liu for CSE 134B.</p>
-         </footer>
+        </footer>
         
     </main>
 
+    <!-- Load navbar script -->
+    <script src="scripts/load-navbar.js"></script>
 </body>
 </html>
