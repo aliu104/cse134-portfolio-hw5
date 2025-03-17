@@ -1,4 +1,5 @@
 import { navbarHTML } from '../components/navbar-html.js';
+import { initDarkMode } from './dark-mode.js';
 
 // Function to load and insert the navbar
 function loadNavbar() {
@@ -7,16 +8,8 @@ function loadNavbar() {
         const navbarPlaceholder = document.getElementById('navbar-placeholder');
         if (navbarPlaceholder) {
             navbarPlaceholder.innerHTML = navbarHTML;
-            
-            // Load dark mode script
-            const darkModeScript = document.createElement('script');
-            darkModeScript.src = './scripts/dark-mode.js';
-            darkModeScript.onload = () => {
-                // Manually trigger the DOMContentLoaded handler in dark-mode.js
-                const event = new Event('DOMContentLoaded');
-                document.dispatchEvent(event);
-            };
-            document.body.appendChild(darkModeScript);
+            // Initialize dark mode immediately after navbar is inserted
+            initDarkMode();
         }
     } catch (error) {
         console.error('Error loading navbar:', error);
