@@ -1,6 +1,6 @@
 // my-component.js
-import { getMyComponentHTML } from './food-card-html.js';
-import { getMyComponentCSS } from './food-card-css.js';
+import { getMyComponentHTML } from '../components/food-card-html.js';
+import { getMyComponentCSS } from '../components/food-card-css.js';
 
 class FoodCard extends HTMLElement {
 	constructor() {
