@@ -58,13 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
             infoMessage.textContent = `Remaining characters: ${remaining}`;
 
             if (remaining <= 20 && remaining > 0) {
-                infoMessage.style.color = "orange"; // Warning color
+                infoMessage.style.color = "orange";
             } else if (remaining <= 0) {
-                infoMessage.style.color = 'var(--fail-color)'; // Error color
-                inp.value = inp.value.substring(0, charLimit); // Prevent exceeding limit
+                infoMessage.style.color = 'var(--fail-color)'; 
+                inp.value = inp.value.substring(0, charLimit); 
                 infoMessage.textContent = "Character limit reached!";
             } else {
-                infoMessage.style.color = 'var(--info-color)'; // Reset color
+                infoMessage.style.color = 'var(--info-color)'; 
             }
         }
     }
