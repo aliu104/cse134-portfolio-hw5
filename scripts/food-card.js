@@ -13,7 +13,7 @@ class FoodCard extends HTMLElement {
 	}
 
 	connectedCallback() {
-		// Create a style tag for the component’s CSS
+		// Create a style tag for the component's CSS
 		const style = document.createElement('style');
 		style.textContent = getMyComponentCSS();
 

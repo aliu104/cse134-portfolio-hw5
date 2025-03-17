@@ -32,10 +32,18 @@ async function loadNavbar() {
         };
         document.body.appendChild(darkModeScript);
 
+        // Initialize any page-specific elements
+        const loadStorageBtn = document.getElementById("load-storage-btn");
+        const loadRemoteBtn = document.getElementById("load-remote-btn");
+        if (loadStorageBtn && loadRemoteBtn) {
+            loadStorageBtn.addEventListener("click", window.loadLocalData);
+            loadRemoteBtn.addEventListener("click", window.loadRemoteData);
+        }
+
     } catch (error) {
         console.error('Error loading navbar:', error);
     }
 }
 
-// Load navbar when DOM is ready
-document.addEventListener('DOMContentLoaded', loadNavbar); 
+// Start loading navbar immediately
+loadNavbar(); 

@@ -27,7 +27,7 @@
     --light-font-main: black;
     --light-card-color: #FFF0D6; 
     --light-box-shadow: rgba(0, 0, 0, 0.3);
-    --light-box-shadow-light: rgba(0, 0, 0, 0.15);
+    --light-box-shadow-light: rgba(0, 0, 0, 0.1);
     --light-fail-color: red;
     --light-success-color: green;
     --light-info-color: gray;
@@ -36,7 +36,7 @@
     --dark-font-main: white;
     --dark-card-color: #89785b;
     --dark-box-shadow: rgba(255, 255, 255, 0.9);
-    --dark-box-shadow-light: rgba(255, 255, 255, 0.25);
+    --dark-box-shadow-light: rgba(255, 255, 255, 0.5);
     --dark-fail-color: rgb(255, 105, 105);
     --dark-success-color: rgb(80, 255, 80);
     --dark-info-color: rgb(198, 198, 198);
