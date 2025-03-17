@@ -1,3 +1,3 @@
 ## Final Enhancements to Site
 
-The biggest change I made was making the navbar a component and loading it in via JavaScript. I did this because then it is easier to update the navbar html once as opposed to copying and pasting it to every html.
+The biggest change I made was making the navbar a component and loading it in via JavaScript. I did this because then it is easier to update the navbar html once as opposed to copying and pasting it to every html. I also created a components folder to store the html and css that are being loaded via JavaScript. Lastly, I cleaned up comments and ensured that my code is neat and readable.
